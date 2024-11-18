@@ -11,11 +11,13 @@ datasource db {
 model products {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   asin        String   @unique
+  image       String?
   title       String
-  description String
+  description String?
   price       Float
-  reviews     Json[]
-  category    String
+  reviews     Int?
+  rating      Float?
+  category    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 

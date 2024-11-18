@@ -4,6 +4,8 @@ export interface Product {
   title: string;
   description: string;
   price: number | string;
-  reviews: unknown[];
+  reviews: number;
+  rating: number;
+  image: string;
   category: string;
 }
